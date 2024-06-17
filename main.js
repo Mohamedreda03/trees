@@ -100,6 +100,62 @@ const products = [
     description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
     category: "trees",
   },
+  {
+    id: 9,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 10,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 11,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 12,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 13,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 14,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 15,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
+  {
+    id: 16,
+    img: "./images/products/image-2.png",
+    name: "الشجرة الخضراء",
+    description: "شجرة تعيش في التربه الرملية وتحتاج الي اشمس بشكل دائم",
+    category: "trees",
+  },
 ];
 
 // .................................
@@ -139,46 +195,111 @@ categoryContainer.innerHTML = categories
   })
   .join("");
 
-// ---------------------------
-const cards = document.querySelectorAll(".swiper-card");
+// .................................
 
-const productsContainer = document.getElementById("filterd_products");
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".swiper-card");
+  const productsContainer = document.getElementById("filterd_products");
+  const loadMoreButton = document.getElementById("load-more");
 
-let filteredProducts = products;
+  let filteredProducts = products;
+  let productsToShow = 9;
+  const productsIncrement = 6;
 
-productsContainer.innerHTML = filteredProducts
-  .map((product) => {
-    return `
-      <div class="card">
-        <img src="${product.img}" alt="product" />
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-      </div>
-    `;
-  })
-  .join("");
-
-cards.forEach((card) => {
-  card.addEventListener("click", (e) => {
-    cards.forEach((card) => {
-      card.classList.remove("active");
-    });
-    card.classList.add("active");
-
-    filteredProducts = products.filter(
-      (product) => product.category === card.dataset.category
-    );
-
-    productsContainer.innerHTML = filteredProducts
+  // Function to render products
+  function renderProducts() {
+    let productsHTML = filteredProducts
+      .slice(0, productsToShow)
       .map((product) => {
         return `
-      <div class="card">
-        <img src="${product.img}" alt="product" />
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-      </div>
-    `;
+          <div class="card">
+            <img src="${product.img}" alt="product" />
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+          </div>
+        `;
       })
       .join("");
+    productsContainer.innerHTML = productsHTML;
+
+    // Hide the "Load More" button if all products are shown
+    if (productsToShow >= filteredProducts.length) {
+      loadMoreButton.style.display = "none";
+    } else {
+      loadMoreButton.style.display = "block";
+    }
+  }
+
+  // Initial render
+  renderProducts();
+
+  // "Load More" button click event
+  loadMoreButton.addEventListener("click", () => {
+    productsToShow += productsIncrement;
+    renderProducts();
+  });
+
+  // Category filter click event
+  cards.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      cards.forEach((card) => {
+        card.classList.remove("active");
+      });
+      card.classList.add("active");
+
+      filteredProducts = products.filter(
+        (product) => product.category === card.dataset.category
+      );
+
+      productsToShow = 9;
+      renderProducts();
+
+      // Stop the Swiper autoplay when a card is clicked
+      if (window.mySwiper && window.mySwiper.autoplay) {
+        window.mySwiper.autoplay.stop();
+      }
+    });
+  });
+});
+
+// counter ---------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  let count = document.querySelectorAll(".count");
+  let arr = Array.from(count);
+
+  function createCounter(item) {
+    let startnumber = 0;
+
+    function counterup() {
+      startnumber++;
+      item.innerHTML = startnumber;
+
+      if (startnumber == item.dataset.number) {
+        clearInterval(stop);
+      }
+    }
+
+    let stop = setInterval(function () {
+      counterup();
+    }, 50);
+  }
+
+  let observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  let observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        createCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  arr.forEach(function (item) {
+    observer.observe(item);
   });
 });
