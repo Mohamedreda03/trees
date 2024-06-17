@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- disktop menu -->
+    <header class="header ar_header">
+      <div class="navbar ar_navbar">
+        <div>
+          <img src="./images/logo.png" alt="" class="logo_image" />
+        </div>
+        <nav class="ar_nav">
+          <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+            <li><a href="#about">عنا</a></li>
+            <li id="flag">
+              <a href="/en.html">
+                <img src="./images/en.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="mobile_nav">
+          <img src="./icons/menu.svg" alt="menu icon" id="open-menu" />
+        </nav>
+      </div>
+    </header>
+    <!-- mobile menu -->
+    <div id="menu" class="ar_menu disactive_mobile_menu">
+      <div class="close_div">
+        <img src="./icons/close.svg" alt="menu icon" id="close-menu" />
+      </div>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="#about">عنا</a></li>
+        <li>
+          <a href="/en.html"
+            ><img src="./images/en.png" alt="" id="flag_mobile" /> English</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+
+    <div class="swiper-hero">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./images/slides/hero-slide-1.jpg" alt="" />
+          <div class="cover"></div>
+          <div class="content">
+            <h2>مرحبا بكم في الزهور الخضراء</h2>
+            <p>
+              لوريم إيبسوم هو ببساطة نص وهمي من صناعة الطباعة والتنضيد. لقد كان
+              لوريم إيبسوم هو النص الوهمي القياسي في هذه الصناعة منذ القرن
+              السادس عشر، عندما أخذت طابعة غير معروفة لوح الكتابة وخلطته لصنع
+              نموذج كتاب.
+            </p>
+            <a href="#products">
+              <button>المنتجات</button>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slides/hero-slide-2.jpg" alt="" />
+          <div class="cover"></div>
+          <div class="content">
+            <h2>مرحبا بكم في الزهور الخضراء</h2>
+            <p>
+              لوريم إيبسوم هو ببساطة نص وهمي من صناعة الطباعة والتنضيد. لقد كان
+              لوريم إيبسوم هو النص الوهمي القياسي في هذه الصناعة منذ القرن
+              السادس عشر، عندما أخذت طابعة غير معروفة لوح الكتابة وخلطته لصنع
+              نموذج كتاب.
+            </p>
+            <a href="#products">
+              <button>المنتجات</button>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slides/hero-slide-3.jpg" alt="" />
+          <div class="cover"></div>
+          <div class="content">
+            <h2>مرحبا بكم في الزهور الخضراء</h2>
+            <p>
+              لوريم إيبسوم هو ببساطة نص وهمي من صناعة الطباعة والتنضيد. لقد كان
+              لوريم إيبسوم هو النص الوهمي القياسي في هذه الصناعة منذ القرن
+              السادس عشر، عندما أخذت طابعة غير معروفة لوح الكتابة وخلطته لصنع
+              نموذج كتاب.
+            </p>
+            <a href="#products">
+              <button>المنتجات</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- end Hero -->
+
+    <!-- products -->
+    <section class="" id="products">
+      <h2 class="section_title">المنتجات</h2>
+      <div class="container swiper-cont">
+        <div class="swiper">
+          <div class="swiper-wrapper" id="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="container products_container">
+        <div class="filterd_products" id="filterd_products"></div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        speed: 500,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+
+        breakpoints: {
+          500: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          820: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          1120: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+          },
+        },
+      });
+
+      // hero swiper
+      const swiperHero = new Swiper(".swiper-hero", {
+        speed: 500,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        loop: true,
+
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
