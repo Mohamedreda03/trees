@@ -427,6 +427,13 @@ section {
   font-size: 3em;
   margin: 0;
 }
+
+.swiper-hero p {
+  font-size: 1.5em;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
 .swiper-hero button {
   background-color: var(--primary-color);
   color: white;
