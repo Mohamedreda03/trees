@@ -626,6 +626,16 @@ section {
   font-size: 1.3rem;
 }
 
+@media (width < 768px) {
+  .footer .footer_links {
+    flex-direction: column;
+  }
+
+  .footer .footer_links ul li a {
+    font-size: 0.8rem;
+  }
+}
+
 .footer .footer_links .icons ul {
   display: flex;
   gap: 1em;
