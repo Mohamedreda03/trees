@@ -118,7 +118,7 @@ h1 {
 }
 
 .ar_navbar {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .logo_image {
@@ -135,7 +135,7 @@ nav ul {
 }
 
 .ar_nav ul {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .en_nav ul {
@@ -536,4 +536,23 @@ section {
   border-radius: 5px;
   font-size: 1.2em;
   cursor: pointer;
+}
+
+/* about us */
+
+.about_us {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.about_us .desc {
+  font-size: 25px;
+  padding: 0 80px 50px 80px;
+  max-width: 100%;
+}
+
+@media (width < 768px) {
+  .about_us .desc {
+    padding: 0 20px 50px 20px;
+  }
 }
