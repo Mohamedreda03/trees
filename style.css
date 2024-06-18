@@ -7,17 +7,19 @@ html {
   --secondary-color: #61ce70;
   --light-color: white;
   --color-2: #d9efe0;
+  --primary-font: "Tajawal", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Tajawal", sans-serif;
+  font-family: var(--primary-font);
   overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+  font-family: var(--primary-font);
 }
 
 .font-light {
