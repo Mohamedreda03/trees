@@ -456,13 +456,11 @@ section {
 /* ---------------- about products -------------------------- */
 
 .about_products {
-  /* border-radius: 20px; */
   width: 100%;
   height: 100%;
   background-color: var(--color-2);
   text-align: center;
-  /* margin-top: 5em; */
-  margin-bottom: 5em;
+  padding: 3em 0;
 }
 .title {
   padding-top: 50px;
@@ -475,12 +473,28 @@ section {
 .about_products .desc {
   font-size: 25px;
   padding: 0 80px 50px 80px;
+  line-height: 1.7;
 }
 
 @media (width < 768px) {
   .about_products .desc {
     padding: 0 20px 50px 20px;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about_products {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* counter */
@@ -540,18 +554,20 @@ section {
 
 /* about us */
 
-.about_us {
-  margin-top: 1em;
+#about {
+  margin: 2em 0;
   text-align: center;
+  background-color: var(--color-2);
+  padding: 1em 0;
 }
 
-.about_us .title h1 {
+#about .title h1 {
   margin: 0 0 20px 0;
   font-size: 2em;
   color: var(--primary-color);
 }
 
-.about_us .desc {
+#about .desc {
   font-size: 25px;
   line-height: 45px;
   padding: 0 20px 50px 20px;
@@ -592,6 +608,18 @@ section {
   color: var(--primary-color);
   text-align: center;
   margin-bottom: 0;
+}
+
+#branches > p {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 0;
+  max-width: 1200px;
+  margin: 1em auto 0;
+}
+
+.animate_branches {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* ------------------ footer ------------------- */
