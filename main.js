@@ -188,7 +188,7 @@ categoryContainer.innerHTML = categories
   .map((category) => {
     return `
         <div data-category="${category.category}" class="swiper-slide swiper-card">
-        <img src="${category.img}" alt="product" />
+        <img src="${category.img}" alt="product" loading="lazy" />
         <h3>${category.name}</h3>
         </div>
     `;
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((product) => {
         return `
           <div class="card">
-            <img src="${product.img}" alt="product" />
+            <img src="${product.img}" alt="product" loading="lazy" />
             <h3>${product.name}</h3>
             <p>${product.description}</p>
           </div>
