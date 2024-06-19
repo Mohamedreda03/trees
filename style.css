@@ -686,6 +686,7 @@ section {
   .footer .footer_links ul {
     padding: 0;
     justify-content: start;
+    gap: 0.1em;
   }
 }
 
@@ -705,4 +706,10 @@ section {
   font-size: 1.2rem;
   background-color: var(--secondary-color);
   margin: 0;
+}
+
+@media (width < 768px) {
+  .copyright {
+    font-size: 1rem;
+  }
 }
