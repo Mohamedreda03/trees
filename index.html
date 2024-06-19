@@ -25,10 +25,11 @@
         </div>
         <nav class="ar_nav">
           <ul>
-            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about_products">عن منتجاتنا</a></li>
             <li><a href="#products">المنتجات</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
             <li><a href="#about">عنا</a></li>
+            <li><a href="#branches">الفروع</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
             <li id="flag">
               <a href="/en.html">
                 <img src="./images/en.png" alt="" />
@@ -47,7 +48,7 @@
         <img src="./icons/close.svg" alt="menu icon" id="close-menu" />
       </div>
       <ul>
-        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#home">عن منتجاتنا</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
         <li><a href="#about">عنا</a></li>
         <li>
@@ -148,7 +149,7 @@
     </section>
 
     <!-- about products -->
-    <div class="about_products">
+    <div id="about_products" class="about_products">
       <div class="title">
         <h1>عن منتجاتنا</h1>
       </div>
@@ -209,36 +210,41 @@
         </div>
       </div>
 
-      <div class="maps">
-        <div class="map_1">
-          Mansheit Al Bagour - Shebein Al Kanater, Sarawah, Ashmoun, Menofia
-          Governorate 6030013
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3446.3746066844064!2d31.080906999999993!3d30.254906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14586f0373cef9a9%3A0xdc2a79f2c9779118!2z2YHZhNin2YjYsSDYrNix2YrZhiDYp9iz2KrZitix2KfYryDZiNiq2LXYr9mK2LEg2YbYqNin2KrYp9iqINin2YTYstmK2YbZhw!5e0!3m2!1sar!2seg!4v1718670029528!5m2!1sar!2seg"
-            width="400"
-            height="400"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+      <section id="branches">
+        <h2>الفروع</h2>
+        <div class="maps">
+          <div class="map_1">
+            <p>
+              Mansheit Al Bagour - Shebein Al Kanater, Sarawah, Ashmoun, Menofia
+              Governorate 6030013
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3446.3746066844064!2d31.080906999999993!3d30.254906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14586f0373cef9a9%3A0xdc2a79f2c9779118!2z2YHZhNin2YjYsSDYrNix2YrZhiDYp9iz2KrZitix2KfYryDZiNiq2LXYr9mK2LEg2YbYqNin2KrYp9iqINin2YTYstmK2YbZhw!5e0!3m2!1sar!2seg!4v1718670029528!5m2!1sar!2seg"
+              width="400"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div lass="map_2">
+            <p>الخطاطبه, El Sadat City, Menofia Governorate 6012401</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.217650539765!2d30.69220109999999!3d30.344763699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458896fe81f16f1%3A0x57170f4556504f9b!2z2YXYstix2LnZhyDZgdmE2KfZiNixINis2LHZitmG!5e0!3m2!1sen!2seg!4v1718670072885!5m2!1sen!2seg"
+              width="400"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-        <div lass="map_2">
-          الخطاطبه, El Sadat City, Menofia Governorate 6012401
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.217650539765!2d30.69220109999999!3d30.344763699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458896fe81f16f1%3A0x57170f4556504f9b!2z2YXYstix2LnZhyDZgdmE2KfZiNixINis2LHZitmG!5e0!3m2!1sen!2seg!4v1718670072885!5m2!1sen!2seg"
-            width="400"
-            height="400"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
+      </section>
     </section>
 
-    <footer>
+    <footer dir="ltr" id="contact">
       <div class="footer">
         <div class="footer_logo">
           <a href="#home">
@@ -246,32 +252,42 @@
           </a>
         </div>
         <div class="footer_links">
-          <ul class="sections">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#products">المنتجات</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-            <li><a href="#about">عنا</a></li>
-          </ul>
-
           <ul class="icons">
             <li>
-              <a href="https://www.facebook.com/FlowerGreen-100905002327038"
-                ><img src="./icons/facebook.svg" alt=""
-              /></a>
+              <a
+                href="https://www.facebook.com/people/%D9%81%D9%84%D8%A7%D9%88%D8%B1-%D8%AC%D8%B1%D9%8A%D9%86-%D8%A7%D8%B3%D8%AA%D9%8A%D8%B1%D8%A7%D8%AF-%D9%88%D8%AA%D8%B5%D8%AF%D9%8A%D8%B1-%D9%86%D8%A8%D8%A7%D8%AA%D8%A7%D8%AA-%D8%A7%D9%84%D8%B2%D9%8A%D9%86%D9%87/100063727696675/?mibextid=LQQJ4d"
+                target="_blank"
+                ><img src="./icons/facebook.svg" alt="" />
+                <p>Flower Green</p>
+              </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/flowergreen.eg/"
-                ><img src="./icons/instagram.svg" alt=""
-              /></a>
+              <a
+                href="https://www.instagram.com/flower_green_import_export/"
+                target="_blank"
+                ><img src="./icons/instagram.svg" alt="" />
+                <p>flower_green_import_export</p>
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/FlowerGreenEg"
-                ><img src="./icons/whatsapp.svg" alt=""
-              /></a>
+              <a
+                href="https://api.whatsapp.com/send?phone=%2B201099992574&context=ARDANLsEAFLFY89a3EFpk06Tq5zSIs7gVzT0PqH7oYby5kL9aJ55imuIFOOysX1fyvXzzpE8R5yU7VN4u9uYWwS4J74ULvUt00Zn9uGfg-6-ZtgWb06gzQZuUWUxWdgdLDKPX3JryS94fsnTDfRki0HOlA&source=FB_Page&app=facebook&entry_point=page_cta"
+                target="_blank"
+              >
+                <img src="./icons/whatsapp.svg" alt="" />
+                <p>+20 109 999 2574</p>
+              </a>
+            </li>
+            <li>
+              <a href="mailto: flowergreen992@gmail.com" target="_blank">
+                <img src="./icons/gmail.svg" alt="" />
+                <p>flowergreen992@gmail.com</p>
+              </a>
             </li>
           </ul>
         </div>
       </div>
+      <p class="copyright">Copyright © 2024 Flower Green. All right reseved</p>
     </footer>
 
     <!-- scripts -->

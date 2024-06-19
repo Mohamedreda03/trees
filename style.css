@@ -567,10 +567,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5em;
+  /* margin-top: 5em; */
   margin-bottom: 5em;
   gap: 1em;
   padding: 1em;
+  font-size: 1.5em;
 }
 
 @media (width < 768px) {
@@ -586,11 +587,18 @@ section {
   border-radius: 20px;
 }
 
+#branches h2 {
+  font-size: 3em;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0;
+}
+
 /* ------------------ footer ------------------- */
 
 .footer {
   background-color: var(--color-2);
-  padding: 2em;
+  padding: 2em 2em 0 2em;
 }
 
 .footer .footer_logo {
@@ -604,7 +612,7 @@ section {
 
 .footer .footer_links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   width: 100%;
@@ -618,29 +626,39 @@ section {
   gap: 2em;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer .footer_links ul li a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: black;
   font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
 @media (width < 768px) {
   .footer .footer_links {
     flex-direction: column;
-  }
-
-  .footer .footer_links ul li a {
-    font-size: 0.8rem;
+    justify-content: start;
   }
 }
 
-.footer .footer_links .icons ul {
+.footer .footer_links ul {
   display: flex;
-  gap: 1em;
+  gap: 4em;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
+}
+
+@media (width < 768px) {
+  .footer .footer_links ul {
+    padding: 0;
+    justify-content: start;
+  }
 }
 
 .footer .footer_links .icons ul li {
@@ -651,4 +669,12 @@ section {
   height: 20px;
   width: 20px;
   border-radius: 50%;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.2rem;
+  background-color: var(--secondary-color);
+  margin: 0;
 }
