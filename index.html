@@ -25,7 +25,8 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+
+    <title>Flower Green</title>
   </head>
   <body>
     <!-- disktop menu -->
@@ -122,9 +123,6 @@
       <!-- If we need navigation buttons -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
     </div>
 
     <!-- end Hero -->
@@ -134,7 +132,7 @@
     <section class="counter_section">
       <div id="counter" data-aos="fade-up">
         <div class="item">
-          <h1 class="count" data-number="15"></h1>
+          <h1 class="count" data-number="16"></h1>
           <h3 class="text">سنوات الخبرة</h3>
         </div>
         <div class="item">
@@ -166,19 +164,149 @@
     <!-- products -->
     <section class="animate_products" id="products" data-aos="fade-up">
       <h2 class="section_title">المنتجات</h2>
-      <div class="container swiper-cont">
-        <div class="swiper">
-          <div class="swiper-wrapper" id="swiper-wrapper"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+
+      <div class="products_sec" id="products_sec">
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="container products_container">
-        <div class="filterd_products" id="filterd_products"></div>
-        <div class="load-more-container">
-          <button id="load-more">عرض المزيد</button>
-        </div>
+      <div class="more_ptn_container">
+        <a href="/products.html" class="more_products">المذيد من المنتجات</a>
       </div>
     </section>
 
@@ -240,6 +368,8 @@
       </div>
     </section>
 
+    <!-- ززززززززززززززززززززززززززز -->
+
     <footer dir="ltr" id="contact">
       <div class="footer">
         <div class="footer_logo">
@@ -290,6 +420,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         AOS.init({
@@ -297,44 +428,33 @@
         });
       });
     </script>
+
     <script>
-      // products swiper
-      const swiper = new Swiper(".swiper", {
-        speed: 500,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        slidesPerView: 3,
-        spaceBetween: 20,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          500: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          820: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-          },
-          1120: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-          },
-        },
-      });
-
-      window.mySwiper = swiper;
-
       // hero swiper
       const swiperHero = new Swiper(".swiper-hero", {
         speed: 500,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+
+        loop: true,
+        spaceBetween: 30,
+
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <script>
+      const product = new Swiper(".swiper-product", {
+        speed: 500,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
 
         loop: true,
@@ -347,6 +467,8 @@
       });
     </script>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./data.js"></script>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>المنتجات</title>
+  </head>
+  <body>
+    <!-- disktop menu -->
+    <header class="header ar_header">
+      <div class="navbar ar_navbar">
+        <div>
+          <img src="./images/logo.png" alt="شعار" class="logo_image" />
+        </div>
+        <nav class="ar_nav">
+          <ul>
+            <li><a href="#about_products">المنتجات</a></li>
+            <li><a href="#about">عنا</a></li>
+            <li><a href="#branches">الفروع</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+            <li id="flag">
+              <a href="./en/index.html">
+                <img src="./images/en.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="mobile_nav">
+          <img src="./icons/menu.svg" alt="menu icon" id="open-menu" />
+        </nav>
+      </div>
+    </header>
+    <!-- mobile menu -->
+    <div id="menu" class="ar_menu disactive_mobile_menu">
+      <div class="close_div">
+        <img src="./icons/close.svg" alt="menu icon" id="close-menu" />
+      </div>
+      <ul>
+        <li><a href="#about_products">المنتجات</a></li>
+        <li><a href="#about">عنا</a></li>
+        <li><a href="#branches">الفروع</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+        <li>
+          <a href="./en/index.html"
+            ><img src="./images/en.png" alt="" id="flag_mobile" /> English</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <section class="animate_products" id="products" data-aos="fade-up">
+      <h2 class="section_title">جميع المنتجات</h2>
+
+      <div class="products_sec" id="products_sec">
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swiper-product">
+            <div class="swiper-wrapper">
+              <img
+                src="./images/products/product01.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+
+              <img
+                src="./images/products/product02.jpg"
+                alt=""
+                loading="lazy"
+                class="product_image swiper-slide"
+              />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div>
+              <h3>باهونيا</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const product = new Swiper(".swiper-product", {
+        speed: 500,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        loop: true,
+
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

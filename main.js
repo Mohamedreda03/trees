@@ -1,3 +1,7 @@
+import data from "./data.js";
+
+console.log(data);
+
 const categories = [
   {
     id: 1,
@@ -184,54 +188,77 @@ menuItems.forEach((item) => {
 
 const categoryContainer = document.getElementById("swiper-wrapper");
 
-categoryContainer.innerHTML = categories
-  .map((category) => {
-    return `
-        <div data-category="${category.category}" class="swiper-slide swiper-card">
-        <img src="${category.img}" alt="product" loading="lazy" />
-        <h3>${category.name}</h3>
-        </div>
-    `;
-  })
-  .join("");
+// categoryContainer.innerHTML = data
+//   .map((product, i) => {
+//     return `
+//         <div class="swiper-slide swiper-card">
+//         <img src="${product.img[i]}" alt="product" loading="lazy" />
+//         <h3>${product.name}</h3>
+//         </div>
+//     `;
+
+//     /**
+//          return `
+//         <div class="swiper-slide swiper-card">
+//          <div class="product-images">
+//             <div class="swiper-wrapper" id="swiper-wrapper" >
+//               ${product.images.map(
+//                 (img) => `<img src="${img}" alt="product" loading="lazy" />`
+//               )}
+//             </div>
+//          </div>
+//          <h3>${product.name}</h3>
+//         </div>
+//     `;
+
+//      */
+//   })
+//   .join("");
 
 // .................................
 
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".swiper-card");
-  const productsContainer = document.getElementById("filterd_products");
+  const productsContainer = document.getElementById("products_sec");
   const loadMoreButton = document.getElementById("load-more");
 
-  let filteredProducts = products;
+  let filteredProducts = data;
   let productsToShow = 9;
   const productsIncrement = 6;
 
   // Function to render products
-  function renderProducts() {
-    let productsHTML = filteredProducts
-      .slice(0, productsToShow)
-      .map((product) => {
-        return `
-          <div class="card">
-            <img src="${product.img}" alt="product" loading="lazy" />
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-          </div>
-        `;
-      })
-      .join("");
-    productsContainer.innerHTML = productsHTML;
+  // function renderProducts() {
+  //   let productsHTML = data
+  //     .slice(0, productsToShow)
+  //     .map((product) => {
+  //       return `
+  //       <div class="card">
+  //         <div class="swiper-product">
+  //           <div class="swiper-wrapper">
+  //             <img
+  //               src="./images/products/product01.jpg"
+  //               alt=""
+  //               loading="lazy"
+  //               class="product_image swiper-slide"
+  //             />
 
-    // Hide the "Load More" button if all products are shown
-    if (productsToShow >= filteredProducts.length) {
-      loadMoreButton.style.display = "none";
-    } else {
-      loadMoreButton.style.display = "block";
-    }
-  }
+  //             <img
+  //               src="./images/products/product02.jpg"
+  //               alt=""
+  //               loading="lazy"
+  //               class="product_image swiper-slide"
+  //             />
+  //           </div>
+  //         </div>
+  //       </div>
+  //       `;
+  //     })
+  //     .join("");
+  //   productsContainer.innerHTML = productsHTML;
+  // }
 
-  // Initial render
-  renderProducts();
+  // // Initial render
+  // renderProducts();
 
   // "Load More" button click event
   loadMoreButton.addEventListener("click", () => {
